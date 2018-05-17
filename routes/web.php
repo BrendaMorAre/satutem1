@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::view('/declaracion' , 'declaration');
+Route::view('/declaraciones' , 'declarations');
