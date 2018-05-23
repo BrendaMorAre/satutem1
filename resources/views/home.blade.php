@@ -1,37 +1,23 @@
-<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('css/style.css') }}" rel="stylesheet">
-<script type="text/javascript" src="/js/app.js"></script>
+@extends('layouts.app')
 
-<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-    <div class="container">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
 
-        <a class="navbar-brand" href="#">SAT UTeM</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <!-- left navigation links -->
-                <ul class="navbar-nav mr-auto">
-
-                    <!-- active navigation link -->
-                    <li class="nav-item active">
-                        <div class="dropdown">
-                            <button class="dropbtn">Declaraciones</button>
-                            <div class="dropdown-content">
-                                <a><strong>Provisionales o definitivas</strong></a>
-                                <a href="{{ url('/declaraciones') }}">Mensuales</a>
-                            </div>
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
                         </div>
-                    </li>
-                </ul>
+                    @endif
 
-                <!-- right navigation link -->
-                <!--<ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                </ul>-->
-
+                    You are logged in!
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+</div>
+@endsection
