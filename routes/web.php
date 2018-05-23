@@ -11,7 +11,13 @@
 |
 */
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
+Auth::routes();
+
+//Vistas
 Route::view('/declaraciones' , 'declarations');
+
+//controladores
+Route::get('/home', 'HomeController@index')->name('home');
