@@ -11,18 +11,20 @@
 
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
-                <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-xs-6">
 
                             <h3>*Documento</h3>
-                            <p><input placeholder="Consulta Declaracion" oninput="this.className = ''" disabled></p>
+                            <input placeholder="Consulta Declaracion" oninput="this.className = ''" disabled>
                             <h3>*RFC</h3>
-                            <p><input placeholder="{{ Auth::user()->name }}" oninput="this.className = ''" disabled></p>
+                            <p><input placeholder="{{ Auth::user()->username }}" oninput="this.className = ''" disabled></p>
                             <h3>Periodicidad</h3>
                             <p><input placeholder="" oninput="this.className = ''"></p>
                             <h3>Periodo</h3>
-                            <p><input placeholder="" oninput="this.className = ''"></p>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Seleccionar...</option>
+                                    <option>...</option>
+                                </select>
                             <h3>Fecha de presentacion</h3>
                             <p><input type="date" placeholder="" oninput="this.className = ''"></p>
                             <h3>No. de Operacion</h3>
@@ -30,7 +32,7 @@
 
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xs-6">
 
                             <h3>*Declaracion</h3>
                             <p><input placeholder="Provisional o Definitiva de impuestos Federales" oninput="this.className = ''" disabled></p>
@@ -44,9 +46,8 @@
                         </div>
 
                     </div>
-                    <div class="alert alert-info" >
-                        <strong>*Campos obligatorios</strong>
-                    </div>
+                <div class="alert alert-info col-xs" >
+                    <strong>*Campos obligatorios</strong>
                 </div>
             </div>
 
@@ -89,3 +90,4 @@
     @endsection
 
 @endif
+
