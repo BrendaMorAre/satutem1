@@ -55,6 +55,7 @@
                 </div>
             </div>
         </nav>
+        <h1>Hola</h1>
 
         @yield('content')
     </div>
